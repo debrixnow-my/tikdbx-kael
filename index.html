@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TIKDBX - TikTok Video & Photo Downloader</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- SweetAlert2 CSS and JS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav
+            class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm"
+        >
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#home">
+                    <i class="fab fa-tiktok me-2"></i>TIKDBX
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#download">Download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container mt-5 pt-5">
+            <section id="home" class="text-center mb-5">
+                <h1 class="display-5 fw-bold text-primary">
+                    TikTok Media Downloader
+                </h1>
+                <p class="lead text-muted">
+                    Download video dan foto TikTok dengan mudah tanpa watermark
+                </p>
+            </section>
+
+            <section id="download" class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card download-card shadow-lg">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <input
+                                        type="text"
+                                        id="tiktokUrl"
+                                        class="form-control url-input"
+                                        placeholder="Masukkan URL TikTok Video/Foto"
+                                    />
+                                    <button
+                                        id="pasteBtn"
+                                        class="btn btn-outline-secondary"
+                                        type="button"
+                                    >
+                                        <i class="fas fa-paste me-2"></i>Paste
+                                    </button>
+                                </div>
+                            </div>
+                            <button
+                                id="downloadBtn"
+                                class="btn btn-primary w-100 d-flex align-items-center justify-content-center download-button"
+                            >
+                                <i class="fas fa-download me-2"></i>Download
+                                Media
+                            </button>
+
+                            <div
+                                id="resultContainer"
+                                class="mt-4 text-center"
+                                style="display: none"
+                            >
+                                <div id="mediaPreview" class="mb-3"></div>
+                                <div id="downloadLinks"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="text-center mt-5">
+                <h2 class="mb-4 text-primary">Tentang TIKDBX</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <p class="text-muted">
+                            TIKDBX adalah platform modern untuk mengunduh media
+                            TikTok dengan mudah dan cepat. Kami menyediakan
+                            layanan download video dan foto tanpa watermark
+                            untuk memenuhi kebutuhan Anda.
+                        </p>
+                        <div class="mt-4">
+                            <a
+                                href="https://github.com/debrixnow-my"
+                                class="btn btn-outline-primary me-2"
+                            >
+                                <i class="fab fa-github me-2"></i>GitHub
+                            </a>
+                            <a
+                                href="https://www.instagram.com/kaelasync?igsh=OXJobGVqNnVkcmZ2"
+                                class="btn btn-outline-primary"
+                            >
+                                <i class="fab fa-instagram me-2"></i>Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h5>TIKDBX</h5>
+                        <p>
+                            Platform modern untuk download media TikTok dengan
+                            mudah dan cepat.
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <a href="#">Home</a>
+                        <a href="#">Download</a>
+                        <a href="#">About</a>
+                    </div>
+                    <div class="footer-section social-links">
+                        <h5>Connect</h5>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2024 Debrixnow. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

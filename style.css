@@ -1,0 +1,182 @@
+/* Custom CSS untuk tambahan styling */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #6366f1;
+    --gradient-primary: linear-gradient(135deg, #3b82f6, #6366f1);
+    --gradient-secondary: linear-gradient(135deg, #10b981, #6ee7b7);
+    --background-color: #f8fafc;
+    --text-color: #1f2937;
+    --text-muted: #6b7280;
+    --card-background: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.navbar-toggler {
+  border: none;       /* Menghapus border default */
+  outline: none;      /* Menghapus outline saat difokuskan */
+  box-shadow: none;   /* Menghapus efek bayangan */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;      /* Menghapus outline saat ditekan */
+  box-shadow: none;   /* Menghapus bayangan saat ditekan */
+}
+
+.navbar {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition:
+        color 0.3s ease,
+        transform 0.2s;
+    color: var(--text-muted);
+}
+
+.nav-link:hover {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-2px);
+}
+
+.download-card {
+    border: none;
+    border-radius: 20px;
+    background: var(--card-background);
+    transition: all 0.4s ease;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.download-card .url-input {
+    border-radius: 15px;
+    border-color: #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.download-card .url-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+}
+
+.download-button {
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    border-radius: 15px;
+    padding: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+.download-button:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 20px rgba(59, 130, 246, 0.3),
+        0 5px 10px rgba(59, 130, 246, 0.2);
+}
+
+/* Footer Modern Profesional */
+footer {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: #e2e8f0;
+    padding: 50px 0;
+    margin-top: 40px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+}
+
+footer .footer-section {
+    text-align: left;
+}
+
+footer .footer-section h5 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+footer a {
+    color: #94a3b8;
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+footer a:hover {
+    color: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+footer .social-links a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+footer .copyright {
+    margin-top: 30px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tambahan detail styling lainnya */
+#about .btn {
+    background: var(--gradient-secondary);
+    border: none;
+    color: white;
+}
+
+#about .btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 10px 20px rgba(16, 185, 129, 0.3),
+        0 5px 10px rgba(16, 185, 129, 0.2);
+}
